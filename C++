@@ -1,0 +1,123 @@
+#include<iostream>
+#include<math.h>
+using namespace std ;
+int main (){
+    int a[300] , n;
+	int sum=0;
+	cin >> n ;
+	for(int i = 0 ; i<n ; i++){
+		cout << "a["<<i<<"] =" ;
+		cin >> a[i];
+		sum+=a[i];
+	}
+cout <<"tong cac so la" << sum ;
+cout << " trung binh cac so la" << float( sum/n);
+    for(int i = 1 ; i<n ; i+=2){
+		cout << "a["<<i<<"] =" ;
+		cin >> a[i];
+		if(a[i]%2==0)
+		sum+=a[i];
+	}
+cout <<"tong cac so le " << sum ;
+    for(int i = 1 ; i<n ; i+=2){
+		cout << "a["<<i<<"] =" ;
+		cin >> a[i];
+		if(a[i]%2==1) 
+		sum+=a[i];
+	}
+cout <<"tong cac so chan " << sum ;
+    for(int i = 1 ; i<n ; i++){
+		cout << "a["<<i<<"] =" ;
+		cin >> a[i];
+		if(a[i]>0) 
+		sum+=a[i];
+	}
+cout <<"tong cac so duong " << sum ;
+    for(int i = 1 ; i<n ; i++){
+		cout << "a["<<i<<"] =" ;
+		cin >> a[i];
+		if(a[i]<0) 
+		sum+=a[i];
+	}
+cout <<"tong cac so am " << sum ;
+
+return 0 ;
+}
+
+
+
+
+//bai2
+// nhap phan tu X 
+
+
+#include<iostream>
+#include<math.h>
+using namespace std ;
+int main (){
+    int a[300] , n;
+	int sum=0;
+	cin >> n ;
+	for(int i = 0 ; i<n ; i++){
+		cout << "a["<<i<<"] =" ;
+		cin >> a[i];
+
+	}
+	int x ; 
+	cout << " nhap x =";
+	if(x>n) cout << " ban da nhap sai ";
+	else{
+	cin >> x ;
+	cout << " phan tu a["<<x<<"]=" << a[x];
+	}
+
+
+return 0 ;
+
+// bai 3 sap xep day tang dan 
+
+#include<iostream>
+#include<math.h>
+using namespace std ;
+int main (){
+	int a[300] , n;
+	int temp , i ;
+	cout << " nhap so n =" ;
+	cin >> n;
+	for(i =0 ; i<n ; i++){
+		cout << "a[" <<i<< "]=" ;
+		cin >> a[i];
+	}
+	for(i =0; i<n ; i++){
+		for(int j=i+1;j<n;j++)
+		{
+			if(a[i]>a[j])
+			{
+				temp=a[i];
+				a[i]=a[j];
+				a[j]=temp;
+			}
+		}
+	}	
+	cout<<"Day tang la : "<<endl;
+	for(i=0;i<n;i++)
+	cout<<" "<<a[i];
+	cout<<endl;
+	for(i =0; i<n ; i++){
+		for(int j=i+1;j<n;j++)
+		{
+			if(a[i]<a[j])
+			{
+				temp=a[i];
+				a[i]=a[j];
+				a[j]=temp;
+			}
+		}
+	}	
+	cout<<"Day giam  la : "<<endl;
+	for(i=0;i<n;i++)
+	cout<<" "<<a[i];
+	cout<<endl;
+return 0 ;
+}
+
