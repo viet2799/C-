@@ -1,0 +1,29 @@
+//Bai 7: 
+#include<iostream>
+#include<cmath>
+using namespace std;
+int ngto(int x)
+{
+    if(x<2)	return 0;
+	for(int i=2;i<=(float)sqrt(x);i++)
+	{
+		if(x%i==0)	return 0;
+	}
+	return 1;
+}
+int main()
+{
+	int a[100],n,i,s=0;
+	cout<<"n= ";
+	cin>>n;
+	for(i=0;i<n;i++)
+	{
+		cout<<"a["<<i<<"]= ";
+		cin>>a[i];
+	}
+	for(i=0;i<n;i++)
+	{
+		if(ngto(a[i])==1)
+		s=s+a[i];
+	}
+	cout<<"Tong so nguyen to = "<<s;
